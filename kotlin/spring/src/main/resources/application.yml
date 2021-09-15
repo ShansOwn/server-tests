@@ -1,0 +1,11 @@
+server:
+  port: 8005
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 10
+      idle-timeout: 1800 # 30 min

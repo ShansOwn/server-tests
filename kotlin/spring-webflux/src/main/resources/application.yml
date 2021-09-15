@@ -1,0 +1,11 @@
+server:
+  port: 8004
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost/test
+    username: root
+    password: root
+    pool:
+      initial-size: 10
+      max-size: 10
+      max-idle-time: 30m
