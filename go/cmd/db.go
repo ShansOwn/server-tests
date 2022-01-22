@@ -1,4 +1,4 @@
-package main
+package core
 
 import (
 	"log"
@@ -14,7 +14,7 @@ const maxIdleConns = 10
 
 const psqlInfo = "host=localhost port=5432 user=root password=root dbname=test sslmode=disable"
 
-func Init() (db *sqlx.DB) {
+func DB() (db *sqlx.DB) {
 	db, err := sqlx.Connect("pgx", psqlInfo)
 	if err != nil {
 		log.Fatal("Can not connect to DB: ", err)
